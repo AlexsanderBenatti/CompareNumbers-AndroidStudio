@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">exemplo</string>
+    <string name="Digite">Digite os Valores:</string>
+    <string name="test">TESTAR</string>
 </resources>

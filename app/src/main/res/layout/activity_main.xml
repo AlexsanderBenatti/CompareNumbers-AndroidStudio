@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
@@ -10,33 +10,33 @@
         android:id="@+id/title"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:text="Digite os valores:"
-        android:textSize="24dp"
+        android:text="@string/Digite"
+        android:textSize="24sp"
     />
     <EditText
         android:id="@+id/num1"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text=""
+        android:textAlignment="center"
         android:inputType="number"
         android:layout_gravity="center_horizontal"
-
-        />
+        android:autofillHints="Digite o primeiro número" />
     <EditText
         android:id="@+id/num2"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:textAlignment="center"
         android:text=""
         android:inputType="number"
         android:layout_gravity="center_horizontal"
-
+        android:autofillHints="Digite o segundo número"
         />
     <Button
         android:id="@+id/test_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:onClick="clickHandlerFunction"
-        android:text="TESTAR"
+        android:text="@string/test"
         />
 </LinearLayout>
