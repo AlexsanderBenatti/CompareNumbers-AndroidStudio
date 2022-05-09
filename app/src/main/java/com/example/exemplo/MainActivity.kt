@@ -18,21 +18,22 @@ class MainActivity : AppCompatActivity() {
     private fun textLength(view: View){
         val editNum1 = findViewById<EditText>(R.id.num1)
         val editNum2 = findViewById<EditText>(R.id.num2)
-
-        val num1 = Integer.parseInt(editNum1.toString())
-        val num2 = Integer.parseInt(editNum2.toString())
-
-        if (num1 == null || num2 == null) {
-            Toast.makeText(this,"Os valores inseridos são invalidos!", Toast.LENGTH_SHORT).show()
-        }
-        else if (num1 > num2) {
-            Toast.makeText(this, "O de cima é maior", Toast.LENGTH_SHORT).show()
-        }
-        else if (num1 < num2) {
-            Toast.makeText(this, "O de baixo é maior", Toast.LENGTH_SHORT).show()
+        if (editNum1.text.toString().isEmpty() || editNum2.text.toString().isEmpty()) {
+            Toast.makeText(this, "Entrada inválida", Toast.LENGTH_SHORT).show()
         }
         else {
-            Toast.makeText(this, "Os números são iguais", Toast.LENGTH_SHORT).show()
+            val num1 = Integer.parseInt(editNum1.text.toString())
+            val num2 = Integer.parseInt(editNum2.text.toString())
+
+            if (num1 > num2) {
+                Toast.makeText(this, "O de cima é maior", Toast.LENGTH_SHORT).show()
+            }
+            else if (num1 < num2) {
+                Toast.makeText(this, "O de baixo é maior", Toast.LENGTH_SHORT).show()
+            }
+            else {
+                Toast.makeText(this, "Os números são iguais", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 }
